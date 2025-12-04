@@ -76,3 +76,46 @@ This project builds a real-time system that predicts student productivity using 
 - Confirmed no unwanted text/object columns remain in the feature set.
 - Saved the processed dataset as:  
   `cleaned_student_productivity.csv`
+
+📊 Charts & Visualizations – Explanation
+
+This project includes several visualizations to understand how different lifestyle factors affect student productivity. Each chart reveals meaningful insights from the dataset.
+
+⭐ 1. Correlation Heatmap
+
+This chart shows how strongly each feature is related to others, especially productivity-related factors.
+It helps identify which variables (sleep, mood, stress, screen time, study hours, etc.) have the highest impact.
+
+![Heatmap](charts/heatmap.png)
+
+⭐ 2. Study Hours Boxplot
+
+This boxplot visualizes the distribution of daily study/work hours among students.
+It highlights average study patterns and detects outliers such as students studying very high or very low hours.
+
+![Study Hours Boxplot](charts/boxplot_study_hours.png)
+
+⭐ 3. Social Media Usage Boxplot
+
+This chart shows variations in daily social media time.
+It helps identify excessive usage outliers that may negatively impact mental state, focus, and productivity.
+
+![Social Media Boxplot](charts/socialmedia_outliers.png)
+
+⭐ 4. Scatter Plot: Study Hours vs Productivity
+
+This scatter plot shows the relationship between hours studied and the predicted productivity score.
+It visually explains whether more study hours actually lead to higher productivity, or if diminishing returns exist.
+
+![Study vs Productivity](charts/scatter_study_productivity.png)
+
+⭐ 5. Steps Walked Distribution
+
+This chart shows how physically active students are.
+It also helps identify whether low activity levels align with lower energy or productivity scores.
+
+![Steps Distribution](charts/steps_distribution.png)
+
+📁 All charts are stored inside the charts/ folder
+
+The complete set of visualization files can be found in the charts directory of this repository.
