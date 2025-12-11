@@ -348,3 +348,55 @@ Cluster 1: Moderate study/sleep habits
 Cluster 2: Low study, high screen time, low physical activity
 
 These patterns help identify different types of students and can be used later to provide tailored recommendations.
+
+## 📘 app.py — Main Application File
+
+The `app.py` file is the core of the Student Productivity Prediction System.
+It handles the user interface, input processing, model loading, predictions,
+and personalized recommendations using Streamlit.
+
+### 🔹 Key Functions of app.py
+
+1. **Loads all trained machine learning models**
+   - `linear_reg.pkl` → Predicts productivity score
+   - `tree_classifier.pkl` → Predicts productivity level (Low/Medium/High)
+   - `scaler.pkl` → Standardizes input data for regression
+   - `kmeans.pkl` & `kmeans_scaler.pkl` → Assigns behavioral cluster
+
+2. **Collects user inputs through Streamlit sidebar**
+   The user provides lifestyle details such as:
+   - Sleep hours
+   - Sleep quality
+   - Caffeine intake
+   - Exercise status
+   - Screen time
+   - Stress, mood, and energy levels
+   - Study hours
+   - Social media usage
+   - Water intake
+   - Steps walked
+
+3. **Runs prediction only when the user clicks the "Predict" button**
+   This prevents unnecessary calculations and makes the UI cleaner.
+
+4. **Processes data and generates outputs**
+   - Productivity Score (numeric)
+   - Productivity Level (Low / Medium / High)
+   - Cluster Group (0, 1, 2)
+   - Personalized recommendations based on user habits
+
+5. **Implements safety rules**
+   Example:
+   If the user sleeps more than 10 hours but studies very little,
+   the model automatically adjusts the prediction and warns the user.
+
+6. **Displays all results in a clean and organized format**
+
+### 🧠 Summary
+`app.py` is responsible for:
+- User interaction  
+- Sending inputs to ML models  
+- Interpreting predictions  
+- Providing recommendations  
+- Building the main interface of the web app  
+
